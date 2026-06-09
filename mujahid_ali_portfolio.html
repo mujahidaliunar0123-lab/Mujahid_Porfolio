@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mujahid Ali | Planning Engineer</title>
+  <meta name="description" content="Mechanical Engineer specializing in Primavera P6 scheduling, turnaround planning, and project controls for Oil & Gas and EPC projects." />
+  <meta name="keywords" content="Planning Engineer Pakistan, Primavera P6, Turnaround Planning, EVM, Oil Gas, FWO, GCC Planning Engineer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0a192f;
+      --navy2: #112240;
+      --navy3: #1d2d44;
+      --accent: #64ffda;
+      --accent-dim: rgba(100,255,218,0.1);
+      --accent-border: rgba(100,255,218,0.25);
+      --txt: #ccd6f6;
+      --txt2: #8892b0;
+      --txt3: #a8b2d8;
+      --white: #e6f1ff;
+      --card: #112240;
+      --border: #233554;
+      --mono: 'JetBrains Mono', 'Courier New', monospace;
+      --sans: 'Inter', system-ui, sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--navy);
+      color: var(--txt);
+      font-family: var(--sans);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── SCROLLBAR ── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--navy); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 999;
+      background: rgba(10,25,47,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+    }
+    .nav-logo {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: 1.15rem;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-decoration: none;
+    }
+    .nav-links {
+      display: flex;
+      gap: 1.75rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--txt2);
+      text-decoration: none;
+      font-size: 13px;
+      font-family: var(--mono);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a span { color: var(--accent); margin-right: 4px; }
+    .nav-resume {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--accent);
+      border: 1px solid var(--accent);
+      padding: 8px 16px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .nav-resume:hover { background: var(--accent-dim); }
+
+    /* hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--accent);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 64px; left: 0; right: 0;
+      background: rgba(10,25,47,0.98);
+      border-bottom: 1px solid var(--border);
+      padding: 1.5rem;
+      z-index: 998;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .mobile-menu a {
+      color: var(--txt2);
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 14px;
+      padding: .5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .mobile-menu a span { color: var(--accent); margin-right: 6px; }
+    .mobile-menu.open { display: flex; }
+
+    /* ── LAYOUT ── */
+    main { padding-top: 64px; }
+    section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 6rem 2.5rem;
+    }
+
+    /* ── SECTION HEADER ── */
+    .sec-head {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    .sec-num {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .sec-title {
+      font-size: 1.75rem;
+      font-weight: 600;
+      color: var(--white);
+      white-space: nowrap;
+    }
+    .sec-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+      min-width: 40px;
+    }
+
+    /* ── HERO ── */
+    #hero {
+      min-height: calc(100vh - 64px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+    }
+    .hero-eyebrow {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: 15px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 1px;
+    }
+    .hero-name {
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 0.5rem;
+    }
+    .hero-subtitle {
+      font-size: clamp(1.5rem, 4vw, 3.2rem);
+      font-weight: 600;
+      color: var(--txt2);
+      line-height: 1.2;
+      margin-bottom: 1.75rem;
+    }
+    .hero-bio {
+      max-width: 580px;
+      color: var(--txt2);
+      font-size: 1rem;
+      line-height: 1.75;
+      margin-bottom: 2.5rem;
+    }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-bottom: 2.75rem;
+    }
+    .tag {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+      border-radius: 3px;
+      padding: 4px 12px;
+      background: var(--accent-dim);
+    }
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.8rem 2rem;
+      font-family: var(--mono);
+      font-size: 13px;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+    .btn-outline:hover { background: var(--accent-dim); }
+    .btn-fill {
+      background: var(--accent);
+      border: 1px solid var(--accent);
+      color: var(--navy);
+      padding: 0.8rem 2rem;
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 4px;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+    .btn-fill:hover { opacity: 0.85; }
+
+    /* ── ABOUT ── */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 3.5rem;
+      align-items: start;
+    }
+    .about-text p {
+      color: var(--txt2);
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+    .about-text p strong { color: var(--txt3); }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .stat-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-top: 2px solid var(--accent);
+      border-radius: 6px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--accent);
+      font-family: var(--mono);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 11px;
+      color: var(--txt2);
+      margin-top: 0.4rem;
+      font-family: var(--mono);
+    }
+
+    /* ── SKILLS ── */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.25rem;
+    }
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .skill-card:hover {
+      border-color: var(--accent);
+      transform: translateY(-3px);
+    }
+    .skill-cat {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      margin-bottom: 1rem;
+    }
+    .skill-list { list-style: none; }
+    .skill-list li {
+      color: var(--txt2);
+      font-size: 13px;
+      padding: 4px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .skill-list li::before {
+      content: '▸';
+      color: var(--accent);
+      font-size: 10px;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ── EXPERIENCE ── */
+    .exp-list {
+      position: relative;
+      padding-left: 2rem;
+    }
+    .exp-list::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+    .exp-item {
+      position: relative;
+      margin-bottom: 3rem;
+      padding-left: 1.75rem;
+    }
+    .exp-item::before {
+      content: '';
+      position: absolute;
+      left: -2.4rem;
+      top: 0.5rem;
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      border: 2px solid var(--navy);
+      box-shadow: 0 0 0 3px rgba(100,255,218,0.15);
+    }
+    .exp-company {
+      font-family: var(--mono);
+      color: var(--accent);
+      font-size: 12px;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.5px;
+    }
+    .exp-role {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.2rem;
+    }
+    .exp-dates {
+      font-size: 12px;
+      color: var(--txt2);
+      font-family: var(--mono);
+      margin-bottom: 0.9rem;
+    }
+    .exp-desc { list-style: none; }
+    .exp-desc li {
+      color: var(--txt2);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 0.45rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .exp-desc li::before {
+      content: '▸';
+      color: var(--accent);
+      font-size: 10px;
+      flex-shrink: 0;
+      margin-top: 0.38rem;
+    }
+    .badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: 0.9rem;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--accent-dim);
+      color: var(--accent);
+      border: 1px solid var(--accent-border);
+      border-radius: 3px;
+      font-size: 11px;
+      padding: 3px 9px;
+      font-family: var(--mono);
+    }
+
+    /* ── PROJECTS ── */
+    .proj-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+    .proj-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 1.75rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .proj-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    .proj-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 1.1rem;
+    }
+    .proj-icon { font-size: 2rem; line-height: 1; }
+    .proj-status {
+      font-family: var(--mono);
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 3px;
+      border: 1px solid;
+    }
+    .status-live { color: #64ffda; border-color: #64ffda; background: rgba(100,255,218,0.08); }
+    .status-done { color: #8892b0; border-color: #8892b0; background: rgba(136,146,176,0.08); }
+    .proj-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 0.6rem;
+    }
+    .proj-desc {
+      font-size: 0.875rem;
+      color: var(--txt2);
+      line-height: 1.65;
+      margin-bottom: 1.1rem;
+    }
+    .proj-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .proj-tag {
+      font-size: 11px;
+      font-family: var(--mono);
+      color: var(--txt3);
+    }
+    .proj-tag + .proj-tag::before { content: '·'; margin-right: 0.5rem; color: var(--txt2); }
+
+    /* ── EDUCATION ── */
+    .edu-list { display: flex; flex-direction: column; gap: 1.25rem; }
+    .edu-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 6px 6px 0;
+      padding: 1.25rem 1.5rem;
+    }
+    .edu-school { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 0.2rem; }
+    .edu-degree { font-size: 0.9rem; color: var(--accent); font-family: var(--mono); margin-bottom: 0.2rem; }
+    .edu-years { font-size: 12px; color: var(--txt2); font-family: var(--mono); }
+
+    /* ── CONTACT ── */
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+    .contact-text p {
+      color: var(--txt2);
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem;
+      line-height: 1.75;
+    }
+    .contact-text p strong { color: var(--txt3); }
+    .contact-links { display: flex; flex-direction: column; gap: 0.85rem; }
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+      color: var(--txt2);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+      padding: 0.5rem;
+      border-radius: 4px;
+      transition: color 0.2s, background 0.2s;
+    }
+    .contact-link:hover { color: var(--accent); background: var(--accent-dim); }
+    .contact-icon {
+      width: 38px; height: 38px;
+      background: var(--navy3);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-form {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 2rem;
+    }
+    .form-row { margin-bottom: 1.1rem; }
+    .form-row label {
+      display: block;
+      font-size: 12px;
+      font-family: var(--mono);
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+      letter-spacing: 0.5px;
+    }
+    .form-row input,
+    .form-row textarea {
+      width: 100%;
+      background: var(--navy);
+      border: 1px solid var(--border);
+      color: var(--txt);
+      padding: 0.7rem 1rem;
+      border-radius: 4px;
+      font-size: 0.9rem;
+      font-family: var(--sans);
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-row input:focus,
+    .form-row textarea:focus { border-color: var(--accent); }
+    .form-row textarea { height: 110px; resize: vertical; }
+    .submit-btn {
+      width: 100%;
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.8rem;
+      font-family: var(--mono);
+      font-size: 13px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .submit-btn:hover { background: var(--accent-dim); }
+    .submit-btn.sent { color: var(--accent); background: var(--accent-dim); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 2.5rem;
+      text-align: center;
+    }
+    footer p {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--txt2);
+      line-height: 1.8;
+    }
+    footer p span { color: var(--accent); }
+
+    /* ── SIDE DECORATIONS ── */
+    .side-email {
+      position: fixed;
+      right: 2rem;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .side-email a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--txt2);
+      text-decoration: none;
+      writing-mode: vertical-rl;
+      letter-spacing: 2px;
+      transition: color 0.2s, transform 0.2s;
+    }
+    .side-email a:hover { color: var(--accent); transform: translateY(-3px); }
+    .side-email::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100px;
+      background: var(--txt2);
+    }
+    .side-social {
+      position: fixed;
+      left: 2rem;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+    .side-social a {
+      color: var(--txt2);
+      text-decoration: none;
+      font-size: 1.1rem;
+      transition: color 0.2s, transform 0.2s;
+      display: block;
+    }
+    .side-social a:hover { color: var(--accent); transform: translateY(-3px); }
+    .side-social::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 100px;
+      background: var(--txt2);
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .fade-in { animation: fadeInUp 0.6s ease forwards; }
+    .fade-in-1 { animation-delay: 0.1s; opacity: 0; }
+    .fade-in-2 { animation-delay: 0.2s; opacity: 0; }
+    .fade-in-3 { animation-delay: 0.3s; opacity: 0; }
+    .fade-in-4 { animation-delay: 0.4s; opacity: 0; }
+    .fade-in-5 { animation-delay: 0.5s; opacity: 0; }
+    .fade-in-6 { animation-delay: 0.6s; opacity: 0; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 768px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links, .nav-resume, .side-email, .side-social { display: none; }
+      .hamburger { display: flex; }
+      section { padding: 4rem 1.25rem; }
+      .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .contact-wrap { grid-template-columns: 1fr; gap: 2rem; }
+      .stats-grid { grid-template-columns: repeat(4, 1fr); }
+      .stat-num { font-size: 1.3rem; }
+    }
+    @media (max-width: 480px) {
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#hero" class="nav-logo">MA.</a>
+    <ul class="nav-links">
+      <li><a href="#about"><span>01.</span>About</a></li>
+      <li><a href="#skills"><span>02.</span>Skills</a></li>
+      <li><a href="#experience"><span>03.</span>Experience</a></li>
+      <li><a href="#projects"><span>04.</span>Projects</a></li>
+      <li><a href="#education"><span>05.</span>Education</a></li>
+      <li><a href="#contact"><span>06.</span>Contact</a></li>
+    </ul>
+    <a href="mailto:mujahidaliunar0123@gmail.com" class="nav-resume">Hire Me</a>
+    <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu">
+    <a href="#about" onclick="this.parentElement.classList.remove('open')"><span>01.</span>About</a>
+    <a href="#skills" onclick="this.parentElement.classList.remove('open')"><span>02.</span>Skills</a>
+    <a href="#experience" onclick="this.parentElement.classList.remove('open')"><span>03.</span>Experience</a>
+    <a href="#projects" onclick="this.parentElement.classList.remove('open')"><span>04.</span>Projects</a>
+    <a href="#education" onclick="this.parentElement.classList.remove('open')"><span>05.</span>Education</a>
+    <a href="#contact" onclick="this.parentElement.classList.remove('open')"><span>06.</span>Contact</a>
+  </div>
+
+  <!-- SIDE DECORATIONS -->
+  <div class="side-email">
+    <a href="mailto:mujahidaliunar0123@gmail.com">mujahidaliunar0123@gmail.com</a>
+  </div>
+  <div class="side-social">
+    <a href="https://www.linkedin.com/in/mujahid2001/" target="_blank" rel="noopener" title="LinkedIn">in</a>
+    <a href="mailto:mujahidaliunar0123@gmail.com" title="Email">@</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero">
+      <p class="hero-eyebrow fade-in fade-in-1">Hi, my name is</p>
+      <h1 class="hero-name fade-in fade-in-2">Mujahid Ali.</h1>
+      <h2 class="hero-subtitle fade-in fade-in-3">I plan, schedule &amp; control projects.</h2>
+      <p class="hero-bio fade-in fade-in-4">
+        Mechanical Engineer specializing in Primavera P6 scheduling, turnaround planning, and project controls for Oil &amp; Gas, EPC, and infrastructure projects. Currently working at FWO Pakistan — with international experience in Saudi Arabia and open to GCC opportunities.
+      </p>
+      <div class="hero-tags fade-in fade-in-5">
+        <span class="tag">Primavera P6</span>
+        <span class="tag">Turnaround Planning</span>
+        <span class="tag">EVM</span>
+        <span class="tag">Critical Path Method</span>
+        <span class="tag">Power BI</span>
+        <span class="tag">FIDIC Contracts</span>
+        <span class="tag">EOT Claims</span>
+        <span class="tag">Oracle PMP Certified</span>
+      </div>
+      <div class="hero-btns fade-in fade-in-6">
+        <a href="#contact" class="btn-outline">Get In Touch</a>
+        <a href="#experience" class="btn-fill">View My Work</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sec-head">
+        <span class="sec-num">01.</span>
+        <h2 class="sec-title">About Me</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm a <strong>Mechanical Engineer</strong> with hands-on experience in turnaround planning at OGDCL and international project exposure in Saudi Arabia. My focus is bringing clarity and control to complex construction and shutdown projects through precise scheduling and reporting.</p>
+          <p>I specialize in <strong>Primavera P6 scheduling</strong>, critical path analysis, and progress monitoring for Oil &amp; Gas shutdown and retrofit projects. I'm equally comfortable building self-explanatory dashboards for senior management and managing on-site field reporting.</p>
+          <p>Currently at <strong>Frontier Works Organization</strong>, I manage DPR/WPR/MPR reporting, look-ahead planning, EOT delay claims under FIDIC clauses, and resource dashboards showing machinery and manpower requirements with cost and constraint analysis.</p>
+          <p>Actively seeking <strong>Junior Planning Engineer</strong> opportunities with Oil &amp; Gas operators, EPC contractors, or consultants in Pakistan or the GCC region. Open to: Project Planning · Turnaround Scheduling · Maintenance Planning · Project Controls.</p>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-num">3+</div>
+            <div class="stat-label">Years Experience</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">KSA</div>
+            <div class="stat-label">International Exposure</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">P6</div>
+            <div class="stat-label">Primavera Expert</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num">O&amp;G</div>
+            <div class="stat-label">Industry Focus</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sec-head">
+        <span class="sec-num">02.</span>
+        <h2 class="sec-title">Core Competencies</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-cat">SCHEDULING</div>
+          <ul class="skill-list">
+            <li>Primavera P6 (PPM)</li>
+            <li>Critical Path Method (CPM)</li>
+            <li>Baseline &amp; Recovery Planning</li>
+            <li>Look-ahead Planning</li>
+            <li>Delay Analysis &amp; EOT Claims</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-cat">PROJECT CONTROLS</div>
+          <ul class="skill-list">
+            <li>Earned Value Management (EVM)</li>
+            <li>WBS Development</li>
+            <li>S-Curves &amp; Progress Monitoring</li>
+            <li>Resource Loading &amp; Cost Control</li>
+            <li>Time Impact Analysis</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-cat">REPORTING &amp; TOOLS</div>
+          <ul class="skill-list">
+            <li>Power BI Dashboards</li>
+            <li>Microsoft Excel (Advanced)</li>
+            <li>DPR / WPR / MPR Reports</li>
+            <li>Engineering Coordination</li>
+            <li>Procurement Coordination</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-cat">DOMAIN EXPERTISE</div>
+          <ul class="skill-list">
+            <li>Oil &amp; Gas Turnarounds</li>
+            <li>Shutdown &amp; Maintenance Planning</li>
+            <li>EPC Projects</li>
+            <li>Infrastructure &amp; Road Construction</li>
+            <li>QHSE Compliance</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-cat">CERTIFICATIONS</div>
+          <ul class="skill-list">
+            <li>Oracle PMP Certification</li>
+            <li>Project Management Foundations</li>
+            <li>English Proficiency Certificate</li>
+            <li>BE Mechanical Engineering</li>
+            <li>ASME QUEST Chapter (3.5 yrs)</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <div class="skill-cat">CONTRACTS &amp; COMPLIANCE</div>
+          <ul class="skill-list">
+            <li>FIDIC Contract Administration</li>
+            <li>Variation &amp; Claims Management</li>
+            <li>Stakeholder Management</li>
+            <li>Risk Management</li>
+            <li>Construction Safety &amp; QHSE</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="sec-head">
+        <span class="sec-num">03.</span>
+        <h2 class="sec-title">Professional Experience</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="exp-list">
+
+        <div class="exp-item">
+          <div class="exp-company">Frontier Works Organization (FWO) — Pakistan</div>
+          <div class="exp-role">Planning Engineer</div>
+          <div class="exp-dates">Jan 2026 – Present &nbsp;·&nbsp; 6 months</div>
+          <ul class="exp-desc">
+            <li>Managing infrastructure and road construction planning with end-to-end schedule control.</li>
+            <li>Producing Daily Progress Reports (DPR), Weekly Progress Reports (WPR), and Monthly Progress Reports (MPR).</li>
+            <li>Creating look-ahead schedules and preparing EOT delay claims under FIDIC Contract Agreement clauses.</li>
+            <li>Building self-explanatory Power BI dashboards showing current progress, machinery &amp; manpower resources for upcoming weekly/monthly plans with cost and constraint analysis.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Primavera P6</span>
+            <span class="badge">FIDIC</span>
+            <span class="badge">EOT Claims</span>
+            <span class="badge">Power BI</span>
+            <span class="badge">DPR/WPR/MPR</span>
+            <span class="badge">Look-ahead Planning</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">Pak Arab Engineering (Pvt.) Limited — Sinjhoro, Pakistan</div>
+          <div class="exp-role">Shutdown Planning Engineer</div>
+          <div class="exp-dates">Sep 2025 – Oct 2025 &nbsp;·&nbsp; 2 months</div>
+          <ul class="exp-desc">
+            <li>Developed Primavera P6 schedules for plant maintenance shutdown execution.</li>
+            <li>Updated and maintained Daily Progress Reports (DPR) throughout the shutdown period.</li>
+            <li>Collected and verified on-site plant progress data against the baseline schedule.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Primavera P6</span>
+            <span class="badge">Shutdown Planning</span>
+            <span class="badge">Plant Maintenance</span>
+            <span class="badge">DPR</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">HF Global Services (Pvt) Limited — Riyadh, Saudi Arabia</div>
+          <div class="exp-role">Technical / Field Engineer</div>
+          <div class="exp-dates">Jun 2024 – Dec 2024 &nbsp;·&nbsp; 7 months</div>
+          <ul class="exp-desc">
+            <li>Inspected all Reverse Osmosis (RO) plants of the company across the Kingdom of Saudi Arabia.</li>
+            <li>Reported required maintenance findings and recommendations to management.</li>
+            <li>Compiled and managed a comprehensive inventory of National Water Company (NWC) assets.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Field Engineering</span>
+            <span class="badge">RO Plants</span>
+            <span class="badge">Asset Management</span>
+            <span class="badge">Saudi Arabia</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">ASME QUEST Chapter — Nawabshah, Pakistan</div>
+          <div class="exp-role">Treasurer / Director of Events / Member</div>
+          <div class="exp-dates">Mar 2020 – Aug 2023 &nbsp;·&nbsp; 3.5 years</div>
+          <ul class="exp-desc">
+            <li>Served as Treasurer (Dec 2022 – Aug 2023), managing chapter finances and budgets.</li>
+            <li>Director of Event Management (Oct 2021 – Nov 2022), organizing technical events and workshops.</li>
+            <li>Active member contributing to engineering community development for 3.5 years.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Leadership</span>
+            <span class="badge">Event Management</span>
+            <span class="badge">ASME</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">Pakistan Aeronautical Complex Kamra — Attock, Punjab</div>
+          <div class="exp-role">Engineering Intern</div>
+          <div class="exp-dates">Jun 2023 &nbsp;·&nbsp; 1 month</div>
+          <ul class="exp-desc">
+            <li>Worked across structures, engine overhaul, and maintenance divisions in aerospace applications.</li>
+            <li>Assisted in disassembly, inspection, and reassembly of turbine and piston aircraft engines.</li>
+            <li>Performed structural repair activities including riveting, sheet metal work, and composite patching.</li>
+            <li>Reviewed engineering drawings and part manuals for component fitting and tolerance verification.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Aerospace</span>
+            <span class="badge">Engine Overhaul</span>
+            <span class="badge">Mechanical Engineering</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">Sakrand Sugar Mills Ltd — Kazi Ahmed, Sindh</div>
+          <div class="exp-role">Engineering Intern</div>
+          <div class="exp-dates">Jan 2023 &nbsp;·&nbsp; 1 month</div>
+          <ul class="exp-desc">
+            <li>Studied sugar production processes from sugarcane to final product.</li>
+            <li>Gained hands-on exposure to industrial machinery including boilers, steam turbines, crystallizers, and evaporators.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Industrial Engineering</span>
+            <span class="badge">Process Plants</span>
+          </div>
+        </div>
+
+        <div class="exp-item">
+          <div class="exp-company">British Council — Tharparkar, Sindh</div>
+          <div class="exp-role">Research Assistant</div>
+          <div class="exp-dates">Aug 2021 – Mar 2022 &nbsp;·&nbsp; 8 months</div>
+          <ul class="exp-desc">
+            <li>Conducted field surveys for a British Council-funded project assessing off-grid solar PV feasibility in rural Pakistan (Helario village, Tharparkar).</li>
+            <li>Collaborated with an international academic team from the University of Cambridge and Imperial College London.</li>
+            <li>Contributed to research on community adoption barriers and recommendations for renewable energy transitions.</li>
+          </ul>
+          <div class="badges">
+            <span class="badge">Field Research</span>
+            <span class="badge">Renewable Energy</span>
+            <span class="badge">Cambridge</span>
+            <span class="badge">Imperial College</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sec-head">
+        <span class="sec-num">04.</span>
+        <h2 class="sec-title">Key Projects</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="proj-grid">
+        <div class="proj-card">
+          <div class="proj-header">
+            <span class="proj-icon">🛣️</span>
+            <span class="proj-status status-live">Live</span>
+          </div>
+          <div class="proj-name">Infrastructure &amp; Road Construction — FWO Pakistan</div>
+          <div class="proj-desc">End-to-end planning and controls for strategic road infrastructure. Responsible for multi-level progress reporting (DPR/WPR/MPR), EOT delay claims under FIDIC, and resource dashboards with cost and constraint analysis.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Primavera P6</span>
+            <span class="proj-tag">FIDIC</span>
+            <span class="proj-tag">Power BI</span>
+            <span class="proj-tag">EOT Claims</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-header">
+            <span class="proj-icon">🏭</span>
+            <span class="proj-status status-done">Completed</span>
+          </div>
+          <div class="proj-name">Plant Maintenance Shutdown — Pak Arab Engineering</div>
+          <div class="proj-desc">Developed and maintained Primavera P6 shutdown schedules for plant maintenance at Sinjhoro facility. Tracked daily progress and ensured schedule alignment with turnaround execution milestones.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Shutdown Planning</span>
+            <span class="proj-tag">P6 Scheduling</span>
+            <span class="proj-tag">DPR</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-header">
+            <span class="proj-icon">💧</span>
+            <span class="proj-status status-done">Completed</span>
+          </div>
+          <div class="proj-name">RO Plants Inspection Program — NWC, Saudi Arabia</div>
+          <div class="proj-desc">Field inspection and technical assessment of Reverse Osmosis plants across KSA on behalf of National Water Company. Developed comprehensive asset inventory and maintenance recommendation reports.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Field Engineering</span>
+            <span class="proj-tag">Asset Management</span>
+            <span class="proj-tag">Maintenance</span>
+          </div>
+        </div>
+        <div class="proj-card">
+          <div class="proj-header">
+            <span class="proj-icon">☀️</span>
+            <span class="proj-status status-done">Completed</span>
+          </div>
+          <div class="proj-name">Off-Grid Solar PV Feasibility — British Council</div>
+          <div class="proj-desc">Techno-economic and social feasibility study for off-grid solar PV in rural Tharparkar. Collaborated with researchers from University of Cambridge and Imperial College London on energy poverty assessment.</div>
+          <div class="proj-tags">
+            <span class="proj-tag">Research</span>
+            <span class="proj-tag">Renewable Energy</span>
+            <span class="proj-tag">Field Survey</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="sec-head">
+        <span class="sec-num">05.</span>
+        <h2 class="sec-title">Education</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="edu-list">
+        <div class="edu-card">
+          <div class="edu-school">Quaid-e-Awam University of Engineering, Sciences and Technology (QUEST) — Nawabshah</div>
+          <div class="edu-degree">Bachelor of Engineering (BE), Mechanical Engineering</div>
+          <div class="edu-years">Oct 2019 – Sep 2023</div>
+        </div>
+        <div class="edu-card">
+          <div class="edu-school">Govt. Degree Boys College — Nawabshah</div>
+          <div class="edu-degree">Intermediate, Engineering</div>
+          <div class="edu-years">Pre-Engineering</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sec-head">
+        <span class="sec-num">06.</span>
+        <h2 class="sec-title">Get In Touch</h2>
+        <div class="sec-line"></div>
+      </div>
+      <div class="contact-wrap">
+        <div>
+          <div class="contact-text">
+            <p>Open to <strong>junior planning engineer opportunities</strong> with Oil &amp; Gas operators, EPC contractors, or consultants in <strong>Pakistan or the GCC region</strong>.</p>
+            <p>Available for: Project Planning · Turnaround Scheduling · Maintenance Planning · Project Controls</p>
+            <p>Industries: <strong>Oil &amp; Gas · Petrochemicals · Power · EPC Contractors</strong></p>
+          </div>
+          <div class="contact-links">
+            <a href="mailto:mujahidaliunar0123@gmail.com" class="contact-link">
+              <div class="contact-icon">✉️</div>
+              <span>mujahidaliunar0123@gmail.com</span>
+            </a>
+            <a href="tel:+966568574661" class="contact-link">
+              <div class="contact-icon">📱</div>
+              <span>+966 568 574 661 (KSA)</span>
+            </a>
+            <a href="https://www.linkedin.com/in/mujahid2001/" target="_blank" rel="noopener" class="contact-link">
+              <div class="contact-icon">💼</div>
+              <span>linkedin.com/in/mujahid2001</span>
+            </a>
+            <a href="#" class="contact-link">
+              <div class="contact-icon">📍</div>
+              <span>Karachi, Pakistan · Open to GCC relocation</span>
+            </a>
+          </div>
+        </div>
+        <div class="contact-form">
+          <div class="form-row">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" id="cf-name" />
+          </div>
+          <div class="form-row">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" id="cf-email" />
+          </div>
+          <div class="form-row">
+            <label>Company / Organization</label>
+            <input type="text" placeholder="Your company" id="cf-company" />
+          </div>
+          <div class="form-row">
+            <label>Message</label>
+            <textarea placeholder="Tell me about the opportunity..." id="cf-msg"></textarea>
+          </div>
+          <button class="submit-btn" id="submit-btn" onclick="sendMessage()">Send Message</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Designed &amp; Built by <span>Mujahid Ali</span> · Planning Engineer</p>
+    <p>Karachi, Pakistan &nbsp;·&nbsp; Open to GCC Relocation &nbsp;·&nbsp; <span>mujahidaliunar0123@gmail.com</span></p>
+  </footer>
+
+  <script>
+    function sendMessage() {
+      const btn = document.getElementById('submit-btn');
+      const name = document.getElementById('cf-name').value.trim();
+      const email = document.getElementById('cf-email').value.trim();
+      const msg = document.getElementById('cf-msg').value.trim();
+      if (!name || !email || !msg) {
+        btn.textContent = 'Please fill all fields';
+        btn.style.borderColor = '#ff6b6b';
+        btn.style.color = '#ff6b6b';
+        setTimeout(() => {
+          btn.textContent = 'Send Message';
+          btn.style.borderColor = '';
+          btn.style.color = '';
+        }, 2000);
+        return;
+      }
+      const subject = encodeURIComponent('Portfolio Inquiry — ' + name);
+      const body = encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\nCompany: ' + document.getElementById('cf-company').value + '\n\n' + msg);
+      window.location.href = 'mailto:mujahidaliunar0123@gmail.com?subject=' + subject + '&body=' + body;
+      btn.textContent = 'Message sent ✓';
+      btn.classList.add('sent');
+    }
+
+    // Smooth scroll for nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Active nav highlight on scroll
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 100) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+      });
+    });
+  </script>
+</body>
+</html>
